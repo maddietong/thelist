@@ -703,13 +703,19 @@ var theList = [
     "I was almost born in a Steak 'n' Ale.",
     "Pop a nutmeg. Papa Nutmeg.",
     "In Finland, Papa Nutmeg comes down the chimney and spits fire!",
+    "This kombucha here is no joke. I'm about to shit myself.",
+    "Simple Plan is cominnnnn' to town!",
+    "Do they make furniture memes?",
+    "I like to be homeless on weekends.",
 ]
 
 // Makes the word "index" to be the actual length of the list
 document.body.innerHTML = document.body.innerHTML.replace("index", theList.length);
 
+$('#numberSelect input').first().focus();
+
 //captures the number input by the user
-$( "#submit" ).click(function() {
+$( "#submit" ).on("click", function() {
   //spits out the form value as "chosenNumber=___"
   var value = ( $( '#chosenNumber' ).serialize() );
   //takes var value and removes the "chosenNumber=" portion
@@ -718,11 +724,3 @@ $( "#submit" ).click(function() {
   document.write( theList[num - 1] );
 });
 
-
-//I need my function to take the user's number, run through the list, 
-//and return the string associated with that position in the array. 
-
-//function listItem () {}
-
-
-// var listItem = list[Math.floor(Math.random(userInput) * list.length)];
